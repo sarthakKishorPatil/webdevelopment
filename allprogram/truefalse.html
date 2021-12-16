@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="sort()" >submit</button>
+    <input id="one" type="text">
+    <input id="two" type="text">
+    <p id="output" >error</p>
+
+
+    <script>
+
+        function trueorfalse(){
+            n=document.getElementById("one").value.split(",").map(e=>parseInt(e));
+            //m=document.getElementById("two").value.split(",").map(e=>parseInt(e));
+            
+            m=[];
+
+            for (let index = 0; index < n.length; index++) {
+                const element = n[index];
+                if(find(m,element)==false){
+                    m.push(element);
+                }           
+            }
+            document.getElementById("output").innerHTML = m;
+            }
+        
+            function find(n,m){
+                for (let index = 0; index < n.length; index++) {
+                        if(n[index]==m){
+                            return true;                            
+                        }
+                    }
+                return false;
+            }
+
+            function sort(){
+                n=document.getElementById("one").value.split(",").map(e=>parseInt(e));
+                document.getElementById("output").innerHTML = n.sort();
+            }
+            
+    </script>
+</body>
+</html>

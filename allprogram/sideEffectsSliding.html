@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<style>
+    /* #panel,#flip{
+        padding: 5px;
+        text-align: center;
+        background-color: #e5eecc;
+        border: solid 1px #c3c3c3;
+    }
+    #panel{
+        padding: 50px;
+        display: none;
+    } */
+
+</style>
+<body>
+    <div  id="flip">click to slide down panel</div>
+    <div id="panel">hello world</div>
+    <button id="button">start animation</button>
+
+     <p>
+        By defult, all HTML elements have a static position and cannot be moved. To manipulte the position , remember to first set the css position prooerty of the element to relative, fixed, or absolute!
+    </p> -->
+    <div id="output" style="background:#98bf21;height:100px;width:100px;position:absolute;">Hello</div> -->
+    
+<script>
+    // $(document).ready(function(){
+    //     $("#flip").click(function(){
+    //         $("#panel").slideDown("slow");
+            
+    //     });
+    // });
+
+
+    // $(document).ready(function(){
+    // $("#flip").click(function(){
+    //     $("#panel").slideUp("slow");
+
+    // });
+    // });
+
+    // $(document).ready(function(){
+    //     $("#flip").click(function(){
+    //         $("#panel").slideToggle("slow");
+    //     });
+       
+    // });
+
+    // // $(document).ready(function(){
+    // //     $("button").click(function(){
+    // //         $("div").animate({left:'630px'})
+    // //     });
+    // });
+
+    // $(document).ready(function(){
+    //     $("button").click(function(){
+    //         $("div").animate({
+    //             left:'250px',
+    //             opacity:'o.5',
+    //             height:'150px',
+    //             width:'150px'
+    //         });
+    //     });
+    // });
+
+    //   $(document).ready(function(){
+    //       $("button").click(function(){
+    //       $("div").animate({
+    //           left:'300px',
+    //           height:'+=150px',
+    //           width:'+=150px'
+    //       })
+    //       });
+    //   });
+
+        // $(document).ready(function(){
+        //     $("button").click(function(){
+        //         $("div").animate({
+        //             height:'toggle',
+        //             width:'toggle'
+        //         })
+        //     });
+        // });
+
+        // $(document).ready(function(){
+        //   $("button").click(function(){
+        //       var div=$("div");
+        //       div.animate({height:'300px',opacity:'0.4'}, "slow");
+        //       div.animate({ width:"300px",opacity:"0.8",},"slow");
+        //       div.animate({ height:"100px",opacity:"0.8",},"slow");
+        //       div.animate({ width:"100px",opacity:"0.8",},"slow");
+              
+        //   });  
+        // });
+        
+        // $(document).ready(function(){
+        //     $("button").click(function(){
+        //         var div=$("div");
+        //         div.animate({left:'100px'},"slow");
+        //         div.animate({fontsize:'3em'},"slow");
+
+        //     });
+        // });
+
+        // $(document).ready(function(){
+        //     $("#flip").click(function(){
+        //         $("#panel").slideDown(5000);
+        //     });
+        //     $("button").click(function(){
+        //         $("#panel").stop();
+        //     });
+        // });
+
+        // $(document).ready(function(){
+        //     $("button").click(function(){
+        //         $("p").hide("slow",function(){
+        //             alert("The paragraph is now hidden ");
+        //         });
+
+        //     });
+        // });
+
+        // $(document).ready(function(){
+        //     $("button").click(function(){
+        //         $("p").hide(1000);
+        //         alert("the paragragh is now hidden!")
+
+        //         });
+
+        //     });
+          $(document).ready(function(){
+              $("button").click(function(){
+                  $("p").css("color","red").slideUp(2000).slideDown(2000);
+              });
+
+          });
+          
+        
+</script>    
+</body>
+</html>

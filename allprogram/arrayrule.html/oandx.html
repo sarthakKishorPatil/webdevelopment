@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-gap: 10px ;
+            background-color: #323436;
+            padding: 10px;
+            width: 500px;
+        }
+        .grid-item{
+            background-color: #8c9e8d; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            height: 50px;
+            width: 150px;
+        }
+        
+        
+        
+    </style>
+</head>
+
+<body>
+    <h1>O&x</h1>
+    <div class="grid-container">
+        <button class="grid-item" id="input1" onclick="on(this)"></button>
+        <button class="grid-item" id="input2" onclick="on(this)"></button>
+        <button class="grid-item" id="input3" onclick="on(this)"></button>
+        <button class="grid-item" id="input4" onclick="on(this)"></button>
+        <button class="grid-item" id="input5" onclick="on(this)"></button>
+        <button class="grid-item" id="input6" onclick="on(this)"></button>
+        <button class="grid-item" id="input7" onclick="on(this)"></button>
+        <button  id="input8" onclick="on(this)"></button>
+        <button id="input9" onclick="on(this)"></button>
+        <p id="winner"></p>
+    </div>
+    <button onclick=output()>output </button>
+    <script>
+        function output(){
+            $(".grid-item").html("working");
+        }
+        isFirstPlayer = false;
+        function on(e){
+            if(e.innerHTML != "")
+                return;
+
+            if(isFirstPlayer)
+                e.innerHTML = "X";
+            else
+                e.innerHTML = "O";
+            
+
+            checkWinner();
+            isFirstPlayer = !isFirstPlayer;
+
+        }
+        function read(){
+            n= [document.getElementById("input1").innerHTML,
+            document.getElementById("input2").innerHTML,
+            document.getElementById("input3").innerHTML,
+            document.getElementById("input4").innerHTML,
+            document.getElementById("input5").innerHTML,
+            document.getElementById("input6").innerHTML,
+            document.getElementById("input7").innerHTML,
+            document.getElementById("input8").innerHTML,
+            document.getElementById("input9").innerHTML]
+
+            return n;
+        }
+        function checkWinner(){
+            n=read();
+            if((n[0]!= "" && n[0] ==n[1] && n[0] == n[2])||
+                (n[3]!= "" && n[3]==n[4] && n[3]==n[5])||
+                (n[6]!= "" && n[6]==n[7]&& n[6]==n[8])||
+                (n[0]!= "" && n[0]==n[3]&& n[0]==n[6])||
+                (n[1]!= "" && n[1]==n[4]&& n[1]==n[7])||
+                (n[2]!= "" && n[2]==n[5]&& n[2]==n[8])||
+                (n[0]!= "" && n[0]==n[4]&& n[0]==n[8])||
+                (n[2]!= "" && n[2]==n[4]&& n[2]==n[6])
+
+                
+
+            )
+            {
+                if(isFirstPlayer)
+                    $("#winner").innerHTML="X player wins";
+                else
+                    document.getElementById("winner").innerHTML="O player wins";
+
+            }
+            
+
+        }
+    </script>
+</body>
+</html>

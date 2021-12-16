@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>sort array</h1>
+        <p>The sort() method sorts an array alphabetically</p>
+        <button onclick="sort()"></button>
+        <p id="output0" ></p>
+        <p id="output0-1"></p>
+
+    </div>
+    <script>
+        function sort(){
+            const fruits=["Banana","Orange","apple","mango"];
+            document.getElementById("output0").innerHTML=fruits;
+            fruits.sort();
+            document.getElementById("output0-1").innerHTML=fruits;
+        }
+    </script>
+</body>
+</html>

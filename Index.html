@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button  onclick="function2()" > submit</button>
+    <input id="input" type="text">
+    <p id="output">error</p>
+    <p id="functionUsed"></p>
+    <script>
+        //demo for if statement
+        function function1(){
+            document.getElementById("functionUsed").innerHTML = "Using Funtion1";
+            const input=document.getElementById("input").value;
+            let temp="";
+            if (input==1)
+            temp="heena";
+            else if(input==2)
+            temp="shivam";
+            else if(input==3)
+            temp="sarthak";
+            else
+            temp="invalid text"
+            document.getElementById("output").innerHTML=temp;
+        }
+
+        function function2(){
+            document.getElementById("functionUsed").innerHTML="using function2";
+            if(document.getElementById("input").value==1)
+            document.getElementById("output").innerHTML="sarthak";
+            else if(document.getElementById("input").value==2)
+            document.getElementById("output").innerHTML="shivam";
+            else if(document.getElementById("input").value==3)
+            document.getElementById("output").innerHTML="heena";
+            else
+            document.getElementById("output").innerHTML="invalid text";
+            
+
+
+        }
+
+    </script>
+</body>
+</html>

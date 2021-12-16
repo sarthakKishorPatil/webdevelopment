@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>practice for all work</h1>
+    <div>
+        <button onclick="function1()">submit</button>
+        <input id="input1" type="text">
+        <p id="output">error</p>
+        <p id="page"></p>
+
+    <script>
+        function function1(){
+            document.getElementById("page").innerHTML="by using function 1";
+            const input=document.getElementById("input1").value;
+            let temp=" ";
+            if(input==1)
+                temp="heena";
+            
+            else if(input==2)
+                temp="sarthak";
+            
+            else if(input==3)
+                temp="shivam";
+            
+            else(
+                temp="invide name"
+            )
+            document.getElementById("output").innerHTML=temp;
+            
+            
+        }
+    </script>
+    </div>
+    <div>
+        <button onclick="greaterLess()">submit</button>
+        <input id="input2" type="text">
+        <input id="input21" type="text">
+        <p id="output2" >error</p>
+        <p id="output3"></p>
+
+        <script>
+            function greaterLess(){
+                document.getElementById("output3").innerHTML="by using function 2"
+                input1=parseInt(document.getElementById("input2").value);
+                input2=parseInt(document.getElementById("input21").value);
+
+                if(input1>input2){
+                    document.getElementById("output2").innerHTML=input1;
+
+                }
+                else{
+                    document.getElementById("output2").innerHTML=input2;
+            }
+
+            }
+        </script>
+
+    </div>
+    <div>
+        <button onclick="subtraction()">submit</button>
+        <input id="one" type="text"/>
+        <input id="two" type="text"/>
+        <p id="three">error</p>
+        <p id="four">error2</p>
+
+        <script>
+            function subtraction(){
+                document.getElementById("four").innerHTML="by using fuction 3";
+                input1=parseInt(document.getElementById("one").value);
+                input2=parseInt(document.getElementById("two").value);
+
+                out="";
+                if(input2>input1){
+                    out=input2-input1;
+                }
+                else{
+                    out=input1-input2;
+                }
+               
+                document.getElementById("three").innerHTML=out;
+            }
+        </script>
+    </div>
+</body>
+</html>

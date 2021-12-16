@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="namebyno()">submit</button>
+    <input id="one" type="text">
+    <p id="output">error</p>
+
+
+    <script>
+
+        function namebyno(){
+            input1=parseInt(document.getElementById("one").value);
+            temp="";
+            if(input1==1){
+                temp="heena";
+            }
+            else if(input1==2){
+                temp="shivam";
+            }
+            else if(input1==3){
+                temp="sarthak";
+            }
+            else{
+                temp="invalid";
+            }
+            document.getElementById("output").innerHTML=temp;
+        }
+    </script>
+</body>
+</html>

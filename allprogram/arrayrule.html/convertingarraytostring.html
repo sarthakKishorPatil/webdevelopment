@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Array Methods</h1>
+        <h2>tostring()</h2>
+        <p>The JavaScript method toString() converts an array to a string of (comma separated) array values.</p>
+        <button onclick="tostring()">submit</button>
+        <input id="input" type="text">
+        <p id="output">error</p>
+    </div>
+
+    <div>
+        <hr>
+        <h1>join()</h1>
+        <p>The join() method also joins all array elements into a string.</p>
+        <button onclick="join()">submit</button>
+        <input id="input1" type="text">
+        <p id="output1" ></p>
+        <hr>
+    <div>
+    <div>
+        
+        <h1>popping </h1>
+        <p>The pop() method returns the value that was "popped out":</p>
+        <button onclick="poping()" >submit</button>
+        <input id="input2" type="text">
+        <p id="output2"></p>
+        <p id="output2-1"></p>
+        <hr>
+    </div>
+    <div>
+        <h1>pushing</h1>
+        <p>The push() method adds a new element to an array (at the end):</p>
+        <button onclick="pushing()" >submit</button>
+        <input id="input3" type="text">
+        <p id="output3" ></p>
+        <p id="output3-1" ></p>
+        <hr>
+    </div>
+    <div>
+        <h1>shifting element</h1>
+        <p>The shift() method removes the first array element and "shifts" all other elements to a lower index.</p>
+        <button onclick="shiftingElement()">submit</button>
+        <p id="output4">error</p>
+        <p id="output4-1"></p>
+        <hr>
+    </div>
+    <div>
+        <h1>unshift</h1>
+        <p>The unshift() method adds a new element to an array (at the beginning), and "unshifts" older element</p>
+        <button onclick="unshift()">submit</button>
+        <p id="output5">error</p>
+        <p id="output5-1">error</p>
+        <hr>
+    </div>
+    <div>
+        <h1>changing element</h1>
+        <p>Array elements are accessed using their index number: </p>
+        <button onclick="changingElement()">submit</button>
+        <p id="output6"></p>
+        <p id="output6-1"></p>
+        <hr>
+    </div>
+    <div>
+        <h1>deletingelement</h1>
+        <p>Warning !
+            Array elements can be deleted using the JavaScript operator delete.
+            
+            Using delete leaves undefined holes in the array.
+            
+            Use pop() or shift() instead.</p>
+        <button onclick="deleteElememt()">submit</button>
+        <p id="output7">error</p>
+        <p id="output7-1">error</p>
+        <hr>    
+     </div>
+     <div>
+         <h1>Splicing an Array</h1>
+         <p>The splice() method can be used to add new items to an array:</p>
+         <button onclick="splicingAnArray()">submit</button>
+         <p id="output8">error</p>
+         <p id="output8-1">error</p>
+         <hr>
+    </div> 
+    <div>
+        <h1>concat()</h1>
+        <p>The concat() method merges (concatenates) arrays:</p>
+        <button onclick="concat()">submit</button>
+        <pi id="output9">error</p>
+    </div>
+    <div>
+        <h1>slicing</h1>
+        <p>The slice() method slices out a piece of an array into a new array.
+
+            This example slices out a part of an array starting from array element 1 ("Orange"):</p>
+        <button onclick="slice()">submit</button>
+        <p id="output10">error</p>
+        <p id="output10-1">error</p>    
+    </div>
+    <div>
+        <h1>sort array</h1>
+        <p>The sort() method sorts an array alphabetically</p>
+        <button onclick="sort()">submit</button>
+        <p id="output11" ></p>
+        <p id="output11-1"></p>
+
+    </div>  
+    <div>
+        <h1>Reversing array</h1>
+        <p>The reverse() method reverses the element in an array. You can use it to sort an arry in descending order:</p>
+        <button onclick="reverse()">submit</button>
+        <p id="output12">error</p>
+        <p id="output12-1">error-1</p>
+    </div>
+    <div>
+        <h1>Numeric sort</h1>
+        <p>These fuction used to number in asending order.</p>
+        <button onclick="numericsort()">submit</button>
+        <p id="output13">error</p>
+        <p id="output13-1">error-1</p>
+    </div>
+    <div>
+        <h1>Campare function</h1>
+        <p>campare function with alphabet and numeric </p>
+        <button id="button1" onclick="alphabets()">Alphabets</button>
+        <button id="button2" onclick="numeric()">Numeric</button>
+        <p id="output14">error</p>
+        <p id="output14-1">error</p>
+
+    </div>
+    <div>
+        <h1>random sort</h1>
+        <p>show your list in any random number</p>
+        <button onclick="random1()">submit</button>
+        <p id="output15">error</p>
+    </div>
+    <div>
+        <h1>lowes to highest sort array</h1>
+        <button onclick="lowestHighest()">submit</button>
+        <p id="output16">The lowest number in list</p>
+    </div>
+    <div>
+        <h1>Using math.max() on an array</h1>
+        <p>you can use math.maz.appy to find the highest number in an arry.</p>
+        <button onclick="myArrayMax()">submit</button>
+        <p id="output17">error</p>
+    </div>
+    <div>
+        <h1>Using math max() on an arry</h1>
+        <P>you can use math.min.aply to find the lowest number in a list.</P>
+        <button onclick="myArraymin()">submit</button>
+        <p id="output18">error</p>
+
+    </div>
+    <div>
+        <h1>find highest method using arry and loop methods in java script</h1>
+        <p>The fatest solution is use a "home made method
+            This function loops through an array comparing each value with the highest value found;
+        </p>
+        <p id="output19">the highest number is </p>
+
+
+    </div>
+    <div>
+        <h1>java array sort</h1>
+        <p>sort car object on age</p>
+        <p id="output20">submit</p>
+    </div>
+    <div>
+        <h1>dinf lowest number </h1>
+    </div>
+         
+     
+   
+        
+    
+
+ 
+
+
+    <script>
+        const fruits=["banana","apple","mango","orange","lemon"];
+        const points=[40,100,1,5,25,10];
+
+        function join(){
+            document.getElementById("output1").innerHTML=fruits.join("*");
+        }
+
+        function poping(){
+            document.getElementById("output2").innerHTML=fruits.pop();
+            document.getElementById("output2-1").innerText=fruits;
+        }
+
+        function tostring(){
+            document.getElementById("output").innerHTML=fruits.toString();
+        }
+        function pushing(){
+            document.getElementById("output3").innerHTML=fruits.push("kiwi");
+          //  fruits.push("kiwi");
+            document.getElementById("output3-1").innerHTML=fruits;
+        }
+        function shiftingElement(){
+            document.getElementById("output4").innerHTML=fruits;
+            fruits.shift();
+            document.getElementById("output4-1").innerHTML=fruits;    
+        }
+        function unshift(){
+            document.getElementById("output5").innerHTML=fruits;
+            fruits.unshift("orange");
+            document.getElementById("output5-1").innerHTML=fruits;
+        }
+        function changingElement(){
+            document.getElementById("output6").innerHTML=fruits;
+            //fruits[fruits.length]="kiwi";
+            //the length property provides an easy way to append new element
+            // an array without using the push() method 
+            fruits[0]="kiwi";
+            document.getElementById("output6-1").innerHTML=fruits;
+         }
+         function deleteElememt(){
+            document.getElementById("output7").innerHTML=
+            "The first fruit is mango:"+fruits[0];
+            delete fruits[0];
+            document.getElementById("output7-1").innerHTML=
+            "The first fruit is mango:"+fruits[0];
+         }
+         function splicingAnArray(){
+            document.getElementById("output8").innerHTML=fruits;
+            fruits.splice(2,0,"kiwi","banana");
+            //fruits.splice(2,2,"kiwi","banana");
+            // the splice() method can be used to add new item to an array:
+            document.getElementById("output8-1").innerHTML=fruits;
+         }  
+        function concat(){
+            // the concat() method crates a new array by merging(concateting)existing arrays:
+            const myGirls=["heena","rinkita","payal","pranjal"];
+            const myBoys=["sarthak","shicvam","himanshu","rohit"];
+            const input3=["pooja","rati","jiyansh"];
+           // const myChildren=myGirls.concat(myBoys);
+            const myChildren=myGirls.concat("shweta");
+           // const myChildren=myGirls.concat(myBoys,input3);
+            document.getElementById("output9").innerHTML=myChildren;
+        }
+        function slice(){
+            const fruits=["banana","apple","mango","orange","lemon"];
+            //with cleave parameter settingm you can use splice() to remove elements without leaving "holes" in the array:
+            //the first parameter(0) define the position where new elements should be added(spliced in).
+            //the second parameter (1) define how many element should be removed
+
+           // const citrus = fruits.slice(2);
+            const citrus = fruits.slice(2,4);
+            document.getElementById("output10").innerHTML=fruits+"<br><br>"+citrus;
+        }
+        function sort(){
+            document.getElementById("output11").innerHTML=fruits;
+            fruits.sort();
+            document.getElementById("output11-1").innerHTML=fruits;
+        }
+        function reverse(){
+            document.getElementById("output12").innerHTML=fruits;
+            fruits.sort();
+            fruits.reverse();
+            document.getElementById("output12-1").innerHTML=fruits;
+        }
+        function numericsort(){
+            document.getElementById("output13").innerHTML=points;
+           // points.sort(function(a,b){return a-b});
+            points.sort(function(a,b){return b-a});
+            document.getElementById("output13-1").innerHTML=points;
+
+        }
+        function alphabets(){
+            points.sort();
+            document.getElementById("output14").innerHTML=points;
+        }
+        function numeric(){
+            points.sort(function(a,b){return a-b});
+            document.getElementById("output14-1").innerHTML=points;
+        }
+        function random1(){
+            points.sort(function(a,b){return 0.5-Math.random()});
+            document.getElementById("output15").innerHTML=points;
+        }
+        function lowestHighest(){
+           // points.sort(function(a,b){return a-b});
+            points.sort(function(a,b){return b-a});
+            document.getElementById("output16").innerHTML="The highest number in list"+" "+points[0];
+        }
+
+
+
+        document.getElementById("output17").innerHTML=myArrayMax(points);
+
+        function myArrayMax(arr){
+            
+            return Math.max.apply(null,arr);
+
+        }
+
+        document.getElementById("output18").innerHTML=myArraymin(points);
+
+        function myArraymin(arr){
+            return Math.min.apply(null,arr);
+        }
+
+
+
+        document.getElementById("output19").innerHTML=myArraymin(points);
+
+        function myArrayMax(arr){
+            let len=arr.lenth;
+            let max=-Infinity;
+            while(len--){
+                if (arr[len]>max){
+                    max=arr[len];
+                }
+            }
+            return max;
+        }
+
+        
+        const car=[
+           { type:"volvo",year:2016},
+           {type:"saab",year:2010},
+           {type:"bmw",year:2001} ];
+           
+           displaycar();
+
+           car.sort(function(a,b){return a.year-b.year});
+           displaycar();
+           function displaycar(){
+               document.getElementById("output20").innerHTML=
+               car[0].type+" "+car[0].year+"<br>"+
+               car[1].type+" "+car[1].year+"<br>"+
+               car[2].type+" "+car[2].year;
+           }
+        
+
+         
+             
+         
+
+
+
+    </script>
+ 
+    
+
+</body>
+</html>

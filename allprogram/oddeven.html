@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="oddeven()" >submit</button>
+    <input id="one" type="text">
+    <input id="two" type="text">
+    <p id="output">error</p>
+    <p id="output1">error1</p>
+    <script>
+        function oddeven(){
+            input1=parseInt(document.getElementById("one").value);
+            input2=parseInt(document.getElementById("two").value);
+            
+
+            if(input1%2==0){
+                document.getElementById("output").innerHTML="even";
+
+            }
+            else  {
+            document.getElementById("output").innerHTML="odd";
+            }
+
+
+            if(input2%2==0){
+                document.getElementById("output1").innerHTML="even";
+            }
+            else{
+                document.getElementById("output1").innerHTML="odd";
+
+                }
+
+         }
+            
+            
+            
+        
+    </script>
+</body>
+</html>

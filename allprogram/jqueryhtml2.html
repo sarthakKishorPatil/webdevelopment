@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    
+</head>
+<body>
+    <!-- <p id="test">This is a <b>bold</b> paragraph.</p>
+    <p id="test2">This is another <b>bold</b> paragraph</p>
+    <button id="btn1">Show Old/New Text</button>
+    <button id="btn2">Show Old/New HTML</button> -->
+    <p><a href="https://www.w3schools.com" id="w3s">W3Schools.com</a></p>
+    <button>change href value</button>
+    <p>Mouse over the link(or click on it) to see that the value of the href attribute has changed.</p>
+<script>
+    // $(document).ready(function(){
+    //     $("#btn1").click(function(){
+    //         $("#test").text(function(i,oriText){
+    //             return "old text:"+oriText+"new text: hellow world!(index:"+i+")";
+    //         });
+    //     });
+    //  $(document).ready(function(){
+    //      $("#btn2").click(function(){
+    //          $("#test2").text(function(i,oriText){
+    //              return "old text:"+oriText+"new text:hellow world!(index:"+i+")";
+    //          });
+    //      });
+    //  })   
+    // });
+    //   $(document).ready(function(){
+    //       $("button").click(function(){
+    //           $("#w3s").attr("href","https://www.w3schools.com/jquery/");
+    //       });
+    //   });
+    //   $(document).ready(function(){
+    //       $("button").click(function(){
+    //           $("#w3s").attr({
+    //             "href" : "https://www.w3schools.com/jquery/",
+    //             "title" : "W3Schools jQuery Tutorial"
+    //           });
+    //       });
+    //   });
+      $(document).ready(function(){
+          $("button").click(function(){
+              $("#w3s").attr("href",function(i,origvalue){
+                  return origvalue+"/jquery/";
+              });
+          });
+      });
+</script>
+</body>
+</html>

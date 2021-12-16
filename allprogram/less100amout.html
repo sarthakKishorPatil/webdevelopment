@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="two()">submit</button>
+    <input id="one" type="text">
+    <p id="output">error</p>
+
+    <script>
+        function two(){
+            n=document.getElementById("one").value;
+            i=0;
+
+            for (let index = 0; index < n.length; index++) {
+                if(n[index]>i){
+                        i= n[index];
+                }
+            }
+            document.getElementById("output").innerHTML=i;
+           
+        }
+    </script>
+</body>
+</html>

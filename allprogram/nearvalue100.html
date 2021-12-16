@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="nearvalue100()" >submit</button>
+    <input id="one" type="text">
+    <input id="two" type="text">
+    <p id="output" >error</p>
+    <script>
+
+        function nearvalue100(){
+            input1=parseInt(document.getElementById("one").value);
+            input2=parseInt(document.getElementById("two").value);
+             
+            d1=100-input1;
+            d2=100-input2;
+
+            if(d1<0)
+                d1=d1*-1;
+
+            
+            if (d2<0)
+                d2=d2*-1;
+            
+            if(d1<d2)
+            document.getElementById("output").innerHTML=input1;
+            else
+            document.getElementById("output").innerHTML=input2;
+
+
+            
+        }
+    </script>
+
+    
+</body>
+</html>

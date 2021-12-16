@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="two()">submit</button>
+    <input id="input1" type="text"/>
+    <input id="input2" type="text"/>
+    <p id="output">error</p>
+
+    <script>
+        function two(){
+            
+            n=document.getElementById("input1").value;
+            n = n.split(",").map(e=>parseInt(e));
+            for (let index = 0; index < n.length; index++) 
+            {
+               if(n[index]>n[index+1]){
+                    t=n[index];
+                    n[index]=n[index+1];
+                    n[index+1]=t;
+                      index=-1  
+                      print(n);
+                }
+            }
+            document.getElementById("output").innerHTML=n;
+        }
+
+        function print(msg){
+            t= document.createElement("p");
+            t.innerHTML = msg;
+            document.body.appendChild(t);
+        }
+        
+        </script>
+</body>
+</html>

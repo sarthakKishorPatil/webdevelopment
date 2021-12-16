@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="greaterLess()">submit</button>
+    <input id="input1" type="text">
+    <input id="input2" type="text">
+    <p id="output">error</p>
+    
+
+    <script>
+
+        function greaterLess(){
+            input1=parseInt(document.getElementById("input1").value);
+            input2=parseInt(document.getElementById("input2").value);
+
+            if(input1>input2){
+                document.getElementById("output").innerHTML=input1;
+            }
+            else {
+                document.getElementById("output").innerHTML=input2;
+
+
+            }
+        }
+    </script>
+    
+</body>
+</html>

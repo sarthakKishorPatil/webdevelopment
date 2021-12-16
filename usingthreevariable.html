@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="replace()" >sibmit</button>
+    <input id="one" type= "text">
+    <input id="two" type="text">
+    <script>
+        function replace(){
+            
+            input1=parseInt(document.getElementById("one").value);
+            input2=parseInt(document.getElementById("two").value);
+            input3="";
+
+            input3=input1;
+            input1=input2;
+            input2=input3;
+            
+            document.getElementById("one").value=input1;
+            document.getElementById("two").value=input2;
+            
+
+        }
+    </script>
+</body>
+</html>

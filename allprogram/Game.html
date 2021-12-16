@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Current Output:</p>
+    <p id="output"></p>
+    
+
+    <input id="heads" name="coin" type="radio" value="Heads">
+    <label >Heads</label>
+    
+    <input type="radio" id="tails" name="coin" value="Tails">
+    <label >Tails</label>
+
+    <button onclick="play()" >Play</button>
+    <button onclick="clearOutput()" >clear</button>
+    <button onclick="play10()" >Play10</button>
+    <p id="result"></p>
+    <h3>Your Score:</h3>
+    <p id="score"></p>
+<script>
+    score = 0;
+    ctr = 0;
+    function play(){
+        ctr++;
+        userinput = 0;
+
+        if(document.getElementById("heads").checked)
+         userinput = 1;
+
+        if(win()){
+            document.getElementById("output").innerHTML = userinput == 1 ? "Heads" : "Tails";
+            document.getElementById("result").innerHTML = "You win!!";
+            score++;
+        }
+        else{
+            document.getElementById("output").innerHTML = userinput == 1 ? "Tails" : "Heads";
+            document.getElementById("result").innerHTML = "You lost!!";
+            score--;
+        }
+
+        if(ctr%50!=0){
+            document.getElementById("score").innerHTML += score + ",";
+        }
+        else
+            document.getElementById("score").innerHTML += score + "<br>";
+
+
+    }
+
+    function win(){
+        return Math.random() > .5;
+    }
+
+    function play10(){
+        for (let index = 0; index < 10; index++) {
+            play();
+        }
+    }
+
+    function unFair(){
+
+        min = 0;
+        max = 100;
+        bias = 67 ;  
+        
+        if(score <5)
+            influence = 0 ;
+        else if(score >5 && score <10)
+            influence = .2;
+        else if(score >10 )
+            influence = .8;
+
+        rnd = Math.random() * (max - min) + min;
+        mix = Math.random() * influence;
+        value = rnd * (1 - mix) + bias * mix;
+
+        return value <50;
+
+    }
+
+    function clearOutput(){
+        document.getElementById("score").innerHTML ="";
+    }
+</script>
+
+</body>
+</html>

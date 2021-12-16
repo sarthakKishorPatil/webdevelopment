@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="detect()" >submit</button>
+    <input id="one" type="text">
+    <input id="two" type="text">
+    <p id="output" >error</p>
+    <script>
+        function detect(){
+            //if n is present in m or not 
+            n=document.getElementById("one").value.split(",").map(e=>parseInt(e));
+            m=document.getElementById("two").value.split(",").map(e=>parseInt(e));
+
+            for (let index = 0; index < n.length; index++) {
+                isFound = false;
+                for (let mIndex = 0; mIndex < m.length; mIndex++) {
+                    if(n[index]==m[mIndex]){
+                        isFound= true;
+                        break;
+                    }
+                }
+                if(!isFound){
+                    document.getElementById("output").innerHTML = "false";
+                    break;
+                }
+                else{
+                    document.getElementById("output").innerHTML = "true";
+                }
+            }
+
+                
+            }
+    </script>
+</body>
+</html>
