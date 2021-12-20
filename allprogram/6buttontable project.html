@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<style>
+    button{
+        margin: 0.5cm;
+        padding: 10px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+</style>
+<body>
+   
+    <button name="1"  id="btn1"><b>1</b></button>
+    <button name="2" id="btn2"><p id="output2"></p><b>2</b></button>
+    <button name="3" id="btn3"><p id="output3"></p><b>3</b></button>
+    <button name="4" id="btn4"><p id="output4"></p><b>4</b></button>
+    <button name="5" id="btn5"><p id="output5"></p><b>5</b></button>
+    <button name="6" id="btn6"><p id="output6"></p><b>6</b></button>
+    <button name="7" id="btn7"><p id="output7"></p><b>7</b></button>
+    <button name="8" id="btn8"><p id="output8"></p><b>8</b></button>
+    <button name="9" id="btn9"><p id="output9"></p><b>9</b></button>
+    <button name="10" id="btn10"><p id="output10"></p><b>10</b></button>
+    <p  id="output1"></p>
+    
+    <script>
+        
+        $(document).ready(function(){
+            $("button").click(function(){
+                var temp = parseInt( this.name);
+            $("#output1").append(function() {
+                  off="";
+
+                  for (let index = 1; index <=10 ; index++) 
+                  off=off+temp+"*"+index+"="+ index*temp +"<ol></ol>";
+                  output1.innerHTML=off;
+        });
+        });
+        });
+
+                  
+
+        // $(document).ready(function(){
+        //     $("#btn2").click(function(){
+        //         var temp = parseInt( this.name);
+        //     $("#output2").append(function() {
+        //           off="";
+        //           for (let index = 1; index <=10 ; index++) 
+        //           off=off+temp+"*1="+ index*2 +"<ol></ol>";
+        //           output2.innerHTML=off;
+        // });
+        // });
+        // });
+
+        //  $(document).ready(function(){
+        //     $("#btn3").click(function(){
+        //     $("#output3").append(function() {
+        //           off="";
+        //           for (let index = 1; index <=10 ; index++) 
+        //           off=off+ index*3 +"<ol></ol>";
+        //           output3.innerHTML=off;
+        // });
+        // });
+        // });           
+        
+        // $(document).ready(function(){
+        //     $("#btn4").click(function(){
+        //     $("#output4").append(function() {
+        //           off="";
+        //           for (let index = 1; index <=10 ; index++) 
+        //           off=off+ index*4 +"<ol></ol>";
+        //           output4.innerHTML=off;
+        // });
+        // });
+        // });
+             
+        // $(document).ready(function(){
+        //     $("#btn5").click(function(){
+        //     $("#output5").append(function() {
+        //           off="";
+        //           for (let index = 1; index <=10 ; index++) 
+        //           off=off+ index*5 +"<ol></ol>";
+        //           output5.innerHTML=off;
+        // });
+        // });
+        // });
+             
+        // $(document).ready(function(){
+        //     $("#btn6").click(function(){
+        //     $("#output6").append(function() {
+        //           off="";
+        //           for (let index = 1; index <=10 ; index++) 
+        //           off=off+ index*6 +"<ol></ol>";
+        //           output6.innerHTML=off;
+        // });
+        // });
+        // });         
+                 
+        // $(document).ready(function(){
+        //     $("#btn7").click(function(){
+        //     $("#output7").append(function() {
+        //           off="";
+        //           for (let index = 1; index <=10 ; index++) 
+        //           off=off+ index*7 +"<ol></ol>";
+        //           output7.innerHTML=off;
+        // });
+        // });
+        // });
+        
+        // $(document).ready(function(){
+        //     $("#btn8").click(function(){
+        //     $("#output8").append(function() {
+        //           off="";
+        //           for (let index = 1; index <=10 ; index++) 
+        //           off=off+ index*8 +"<ol></ol>";
+        //         output8.innerHTML=off;
+        // });
+        // });
+        // });
+
+        // $(document).ready(function(){
+        //     $("#btn9").click(function(){
+        //     $("#output9").append(function() {
+        //           off="";
+        //           for (let index = 1; index <=10 ; index++) 
+        //           off=off+ index*9 +"<ol></ol>";
+        //           output9.innerHTML=off;
+        // });
+        // });
+        // });
+
+        // $(document).ready(function(){
+        //     $("#btn10").click(function(){
+        //     $("#output10").append(function() {
+        //           off="";
+        //           for (let index = 1; index <=10 ; index++) 
+        //           off=off+ index*10 +"<ol></ol>";
+        //           output10.innerHTML=off;
+        // });
+        // });
+        // });
+
+        
+    </script>
+
+</body>
+</html>

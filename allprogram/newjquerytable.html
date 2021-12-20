@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<style>
+    button{
+        margin: 0.5cm;
+        padding: 10px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+</style>
+<body>
+    <button id="prev">Previous</button>
+    <button name="1"  id="btn1">1</button>
+    <button name="2" id="btn2">2</button>
+    <button name="3" id="btn3">3</button>
+    <button name="4" id="btn4">4</button>
+    <button name="5" id="btn5">5</button>
+    <button name="6" id="btn6">6</button>
+    <button name="7" id="btn7">7</button>
+    <button name="8" id="btn8">8</button>
+    <button name="9" id="btn9">9</button>
+    <button name="10" id="btn10">10</button>
+    <p  id="output1"></p>
+    <button id="next">Next</button>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                var temp = parseInt( this.innerHTML);
+            $("#output1").append(function() {
+                  off="";
+
+                  for (let index = 1; index <=10 ; index++) 
+                  off=off+temp+"*"+index+"="+ index*temp +"<ol></ol>";
+                  output1.innerHTML=off;
+        });
+        });
+        });
+
+        $(document).ready(function(){
+            $("#prev").click(function(){
+               
+                $("#btn1").html(parseInt( $("#btn1").text()) -10 );
+                $("#btn2").html(parseInt( $("#btn2").text()) -10 );
+                $("#btn3").html(parseInt( $("#btn3").text()) -10 );
+                $("#btn4").html(parseInt( $("#btn4").text()) -10 );
+                $("#btn5").html(parseInt( $("#btn5").text()) -10 );
+                $("#btn6").html(parseInt( $("#btn6").text()) -10 );
+                $("#btn7").html(parseInt( $("#btn7").text()) -10 );
+                $("#btn8").html(parseInt( $("#btn8").text()) -10 );
+                $("#btn9").html(parseInt( $("#btn9").text()) -10 );
+                $("#btn10").html(parseInt( $("#btn10").text()) -10 );
+
+            });
+        });
+        $(document).ready(function(){
+            $("#next").click(function(){
+               
+                $("#btn1").html(parseInt( $("#btn1").text()) +10 );
+                $("#btn2").html(parseInt( $("#btn2").text()) +10 );
+                $("#btn3").html(parseInt( $("#btn3").text()) +10 );
+                $("#btn4").html(parseInt( $("#btn4").text()) +10 );
+                $("#btn5").html(parseInt( $("#btn5").text()) +10 );
+                $("#btn6").html(parseInt( $("#btn6").text()) +10 );
+                $("#btn7").html(parseInt( $("#btn7").text()) +10 );
+                $("#btn8").html(parseInt( $("#btn8").text()) +10 );
+                $("#btn9").html(parseInt( $("#btn9").text()) +10 );
+                $("#btn10").html(parseInt( $("#btn10").text()) +10 );
+
+            });
+        });
+    </script>
+</body>
+</html>
