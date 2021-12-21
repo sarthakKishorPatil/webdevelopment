@@ -12,13 +12,13 @@
     <button>Fibonacci series</button>
     <p id="output">Fibonacci Number </p>
  <script>
-     $(document).ready(function(){
+     $(document).ready(function(){//these function used for Fibonacci number calculation.
          $("button").click(function(){
              $("p").append(function(){
                  input1=0;
                  input2=1;
                  for (let index = 1; index <=10; index++) {
-                     output=a+b;
+                     output=input1+input2;
                      document.getElementById("output").innerHTML+=  ","+output;
                      input1=input2;
                      input2=output;
