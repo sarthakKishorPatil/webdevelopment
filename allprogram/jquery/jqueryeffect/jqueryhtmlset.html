@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <p id="test1">This is a paragraph</p>
+    <p id="test2">this is another paragraph</p>
+    <p><input type="text" id="test3" value="Mickey Mouse"></p>
+    <button id="btn1">Set text</button>
+    <button id="btn2">Set HTML</button>
+    <button id="btn3">Set Value</button> -->
+    <p id="test1">This is a <b>bold</b> paragraph.</p>
+    <p id="test2">This is another <b>bold</b> paragraph</p>
+    <button id="btn1">Show old /new Text</button>
+    <button id="btn2">Show old/new HTML</button>
+     <p><a href="https://www.w3schools.com" id="w3s" >W3School.com</a></p>
+    <button>Change href value</button>
+    <p>mouse over the link(or click on it) to see that the value of the href attribute has changed.</p>
+
+
+<script>
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+            $("#test1").text("hello world");
+        });
+        $("#btn2").click(function(){
+            $("#test2").html("<b>hello world!</b>")
+        });
+        $("#btn3").click(function(){
+            $("#test3").val("Dolly duck");
+        });
+    });
+
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+            $("#test1").text(function(i, origText){
+                return "Old text:" + origText + "New text: hello world(index:"+ 1 +")";
+            });
+            });
+
+        $("#btn2").click(function(){
+            $("#test2").html(function(i, origText){
+                return "Old html:" + origText + "New html:hello <b>world</b>(index:"+ 1 +")"; 
+        });    
+        });
+    });
+
+    $(document).ready(function(){
+        $("button").click(function(){
+            $("#w3s").attr("href" ,"https://www.w3schools.com/jquery/" );
+        });
+    });
+
+    $(document).ready(function(){
+        $("button").click(function(){
+            $("#w3s").attr("herf",function(i,origValue){
+                return origValue+"/jquery";
+            });
+        });
+    });
+</script>   
+</body>
+</html>

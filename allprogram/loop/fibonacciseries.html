@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Fibonacci number</h1>
+    <button>Fibonacci series</button>
+    <p id="output">Fibonacci Number </p>
+ <script>
+     $(document).ready(function(){//these function used for Fibonacci number calculation.
+         $("button").click(function(){
+             $("p").append(function(){
+                 input1=0;
+                 input2=1;
+                 for (let index = 1; index <=10; index++) {
+                     output=input1+input2;
+                     document.getElementById("output").innerHTML+=  ","+output;
+                     input1=input2;
+                     input2=output;
+            }
+            });
+            });
+            });
+</script>
+</body>
+</html>
+                 
+                 
+                    
+
+    

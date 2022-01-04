@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+ <img src="https://www.w3schools.com/images/w3jquery.gif" alt="jquery" width="100" height="140"  ><br><br>
+<!-- <button id="btn1">Insert before</button>
+<button id="btn2">Insert after</button> -->
+<p>click the button to insert text after the image.</p>
+<button onclick="afterText()">insert after</button>
+
+<script>
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+        $("img").after("<b>Before</b>");
+        });
+        $("#btn2").click(function(){
+            $("img").before("<b>After</b>");
+        });
+    });
+
+    function afterText(){
+        var txt1="<b> I<b>";//create element with html
+            var txt2=$("<i></i>").text("love ");
+         var txt3=document.createElement("b");
+         txt3.innerHTML="jQuery!"
+            $("img").after(txt1,txt2,txt3);
+
+    }
+</script>
+</body>
+</html>

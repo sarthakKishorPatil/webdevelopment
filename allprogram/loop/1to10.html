@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <button id="one">reverse</button>
+    <button id="two">start</button>
+    <button id="palindrome">Palindrome</button>
+    <p id="output">error</p>
+    <input id="input1" type="text">
+
+    <script>
+        $(document).ready(function(){
+            $("#one").click(function(){
+                    input1=document.getElementById("input1").value;
+                   off="";
+                   for (let index = input1.length-1; index >=0; index--) {
+                       
+                       off=off+input1[index]+",";
+                    }
+                          output.innerHTML=off;
+            });
+            $("#two").click(function(){
+                input1=document.getElementById("input1").value;
+                off="";
+                for (let index = 0; index <= input1.length-1; index++) {
+                    
+                    off=off+input1[index]+",";
+                }
+                output.innerHTML=off;
+            });
+            $("#palindrome").click(function(){
+                input1=document.getElementById("input1").value;
+                off="";
+                for (let index = input1.length-1; index >=0; index--) {
+                       
+                       off=off+input1[index];
+                    }
+                         // output.innerHTML=off;
+                          if(off==input1){
+                              output.innerHTML="true";
+                          }
+                          else{
+                              output.innerHTML="false";
+                          }
+
+            })
+            
+        });
+            
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <input id="one" type="text">
+    <input id="two" type="text">
+    <button>submit</button>
+    <p id="output">error</p>
+    <script>
+   $(document).ready(function(){
+       $("button").click(function(){
+           input1=document.getElementById("one").value;
+           input2=document.getElementById("two").value;
+           off="";
+           for (let index = 1; index <= input2; index++) {
+               
+               off=off+input1*index+",";
+            }
+            output.innerHTML=off;
+
+       });
+   });
+    </script>
+</body>
+</html>

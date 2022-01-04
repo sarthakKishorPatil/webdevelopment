@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <input id="one" type="text">
+    <input id="two" type="text">
+    <input id="three" type="text">
+    <input id="four" type="text">
+    <button id="btn1">submit</button>
+    <button id="btn2">submit</button>
+    <p id="output">error</p>
+    <p id="output1">error</p> 
+    <p id="output2">error</p>
+    <script>
+      $(document).ready(function(){
+        //   $("btn1").click(function(){
+        //       input1=document.getElementById("one").value;
+        //       input2=document.getElementById("two").value;
+        //       off="";
+        //       if (input1<input2) {
+        //        off=input2-input1;
+        //     }
+        //     else{
+        //         off=input1-input2;
+        //     }
+        //     document.getElementById("output").innerHTML= off;
+        //     });
+        //     });
+        $("#btn2").click(function(){
+            //   input3= $("#three").val();
+            //    input4=$("#four").val();
+               input3=document.getElementById("three").value;
+               input4=document.getElementById("four").value;
+               
+            if (input3%2==0) {
+                document.getElementById("output").innerHTML= "even";
+
+            }
+            else if(input4%2==0){
+            document.getElementById("output1").innerHTML= "even";
+                
+            }
+            else{
+            document.getElementById("output2").innerHTML= "odd";
+             
+            }    
+        });
+           });  
+         
+</script>
+</body>
+</html>
