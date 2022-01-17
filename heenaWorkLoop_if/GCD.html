@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="input0" type="text">
+        <input id="input1" type="text">
+        <button onclick="gcd()">Submit</button>
+        <p id="output"></p>
+        <p id="output1"></p>
+        <p id="output2"></p>
+        <p id="output3"></p>
+        <script>
+            function gcd(){
+                  x=parseInt( document.getElementById("input0").value);
+                  y=parseInt( document.getElementById("input1").value);
+
+                  x1 = [];
+                  y1 = [];
+                  z1=  [];
+                  for (let index = 0; index <= x; index++) {
+                      
+                    if(x%index==0){
+                        x1.push(index);
+                         output.innerHTML+=index+",";}
+                    }
+                    for (let index = 0; index <= y; index++) {
+                    
+                        if(y%index==0){
+                            y1.push(index)
+                            output1.innerHTML+=index+",";
+                        }
+                    }
+                    
+                    for (let index = 0; index < x1.length; index++) {
+                        const element = x1[index];
+                        for (let yIndex = 0; yIndex < y1.length; yIndex++) {
+                            const yElement = y1[yIndex];
+                            if(element == yElement){
+                                z1.push(element)
+                                output2.innerHTML+=element+",";
+                              
+                            } 
+
+                        }
+                    }
+                    // output3.innerHTML= z1.reduce(function(a, b) {
+                    //          return Math.max(a, b);
+                    //                     }, 0);
+                            //    z1.sort(function(a,b){return a-b});
+                            //    let n=z1[z1.length-1];
+                            //    output3.innerHTML="GCD"+" "+n;
+                    
+                    
+                      
+            };
+        </script>
+</body>
+</html>
